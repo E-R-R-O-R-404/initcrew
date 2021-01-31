@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section id="home" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6 col-sm-12">
+                <div class="home-info">
+                    {% for intro1 in indroductions %}
+                    <h1>{{intro1.main_headline}}</h1>
+                    <a href="{{intro1.ctf_link}}#about" class="btn section-btn smoothScroll">Join Us</a>
+                    {% endfor %}
+                    <!-- <span>
+                               CONTACT US 
+                               <small>For any inquiry</small>
+                          </span> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- about beginning -->
+<section id="about" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-5 col-sm-6">
+                <div class="about-info">
+                    <div class="section-title">
+                        <h2>Let us introduce</h2>
+                        <span class="line-bar">...</span>
+                    </div>
+                    {% for intro in indroductions %}
+                    {{intro.indroduction|safe}}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<!-- about ending -->
+
+<!-- event beginning -->
+<section id="events" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12 col-sm-12">
+                <div class="section-title">
+                    <h2>Events</h2>
+                    <span class="line-bar">...</span>
+                </div>
+            </div>
+            {% for slide in sliders %}
+            <div class="col-md-3 col-sm-6 ">
+
+                <div class="work-thumb">
+                    <a href="{{ slide.photo.url }}" class="image-popup">
+                        <img src="{{ slide.thumbnail.url }}" class="img-responsive" alt="Work">
+
+                        <div class="work-info">
+                            <h3>{{ slide.headlines }}</h3>
+                            <small>{{ slide.subtitle }}</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
+<!-- event ending -->
+
+<!-- contactus beginning -->
+{% include 'includes/contactus.html' %}
+
+<!-- contacus ending -->
+{% endblock %}

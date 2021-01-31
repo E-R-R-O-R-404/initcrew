@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- beginning of header -->
+{% include 'includes/header.html' %}
+<!-- ending  of header -->
+
+<body>
+    <!-- beginning of navbar -->
+    {% include 'includes/navbar1.html' %}
+    <!-- ending of navbar -->
+{% block content %}
+
+{% endblock %}
+
+<!-- beiginning of footer -->
+{% include 'includes/footer.html' %}
+<!-- ending of footer -->
+
+<!-- beginning of scripts -->
+{% include 'includes/scripts.html' %}
+<!-- ending of scripts -->
+</body>
+
+</html>

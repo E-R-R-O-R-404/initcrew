@@ -1,0 +1,66 @@
+<section id="contact" data-stellar-background-ratio="0.5">
+    <cnter>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12 col-sm-12">
+                <div class="section-title">
+                    <h2>Contact us</h2>
+                    <span class="line-bar">...</span>
+                </div>
+            </div>
+
+            <div class="col-md-8 col-sm-8">
+                
+                <form id="submit-form" action="{% url 'contactus' %}" method="POST">
+                   {% csrf_token %}
+                    <div class="col-md-6 col-sm-6">
+                        <input type="text" class="form-control" placeholder="Full Name" name="full_name" required="">
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                        <input type="text" class="form-control" placeholder="Subject" name="subject" required="">
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                        <input type="number" class="form-control" placeholder="Mobile Number" maxlength="10" name="phone" required="">
+                    </div>
+                    {% if user.is_authenticated %}
+                    <input type="hidden" name="user_id" value="{{user.id}}">
+                    {% else %}
+                    <input type="hidden" name="user_id" value="00">
+                    {% endif %}
+
+                    {% if user.is_authenticated %}
+                    <div class="col-md-6 col-sm-6">
+                        <input type="email" class="form-control" value="{{user.email}}" placeholder="Your Email" name="email" required="">
+                    </div>
+                    {% else %}
+                    <div class="col-md-6 col-sm-6">
+                        <input type="email" class="form-control" placeholder="Your Email" name="email" required="">
+                    </div>
+                    {% endif %}
+
+                    <div class="col-md-12 col-sm-12">
+                        <textarea   class="form-control" rows="6"  placeholder="Your message to us" name="message" required=""></textarea>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                        <input type="submit" class="form-control" >
+                    </div>
+                    {% if messages %}
+                    <ul class="messages">
+                    <center>
+                        {% for message in messages %}
+                        <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                        {% endfor %}
+                    </center>
+                    </ul>
+                    {% endif %}
+                </form>
+            </center>
+            </div>
+
+        </div>
+    </div>
+</section>

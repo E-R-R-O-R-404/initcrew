@@ -1,0 +1,114 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #D5E4E4;
+    color: #191B26;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+} */
+
+.containers1 {
+    background-color: rgb(29, 27, 27);
+    height: 70vh;
+    width: 70vw;
+    margin-top: 50px;
+    -webkit-box-shadow: -5px 20px 20px 1px rgb(159, 168, 168);
+    -moz-box-shadow: -5px 20px 20px 1px rgb(64, 71, 71);
+    box-shadow: -5px 20px 20px 1px rgb(161, 161, 161);
+    border-radius: 10px;
+}
+
+.descriptions h1 {
+    font-size: 34px;
+    font-weight: bold;
+    word-spacing: 5px;
+    margin-bottom: 20px;
+    color: #1EBCB5;
+}
+
+.descriptions p {
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #f3f3f3;
+}
+
+.carder {
+    display: flex;
+}
+
+.header-images img {
+    height: 500px;
+    width: 300px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.carder .descriptions {
+    padding: 80px 50px;
+}
+
+.boxs {
+    margin: 50px 0px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.boton {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 55px;
+    width: 235px;
+    text-align: left;
+    outline: none;
+    cursor: pointer;
+    margin: 10px 15px 5px 0px;
+    padding-left: 10px;
+}
+
+.boton:after {
+    content: "\f105";
+    background-color: rgba(210, 227, 227, .5);
+    color: #1EBCB5;
+    border: 1px solid rgba(30, 188, 181, .2);
+    font-family: FontAwesome;
+    float: right;
+    border-radius: 50%;
+    padding: 2px 9px;
+    font-size: 1.5em;
+    margin-right: 7px;
+}
+
+.boton a {
+    text-decoration: none;
+    color: #191B26;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+
+/* Estilos call to action */
+
+
+/* button:last-child {
+    background: linear-gradient(130deg, #1ebcb5, #056d6e);
+}
+
+.green a {
+    color: #fff;
+    font-weight: normal;
+}
+
+.green:after {
+    background-color: rgba(255, 255, 255, .09);
+    border: 1px solid rgba(255, 255, 255, .3);
+    color: #fff;
+}  */

@@ -1,0 +1,64 @@
+<footer data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-5 col-sm-12">
+                <div class="footer-thumb footer-info">
+                    <h2>InitCrew</h2>
+                    <p>
+                    {% for intro1 in indroductions %}
+                    {{intro1.short_intro}}
+                    {% endfor %}
+                </p>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-sm-4">
+                <div class="footer-thumb">
+                    <h2>Company</h2>
+                    <ul class="footer-link">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="{% url 'bloggers' %}">Read Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-sm-4">
+                <div class="footer-thumb">
+                    <h2>Services</h2>
+                    <ul class="footer-link">
+                        <li><a href="#">Education</a></li>
+                        <li><a href="#">Event Handling</a></li>
+                        <li><a href="mailto:initcrew1337@gmail.com ">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-12 col-sm-12">
+                <div class="footer-bottom">
+                    <div class="col-md-6 col-sm-5">
+                        <div class="copyright-text">
+                            <p>Made with ❤️ | InitCrew</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-7">
+                        <div class="phone-contact">
+                            <!-- <p>Call us <span>(+66) 010-020-0340</span></p> -->
+                        </div>
+                        <ul class="social-icon">
+                            {% for navlink in navlinks %}
+                            <li>
+                                <a href="{{navlink.twitter_link}}" class="fa fa-twitter"></a>
+                            </li>
+                            <li>
+                                <a href="{{ navlink.youtube_link }}" class="fa fa-youtube"></a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,50 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% block content %}
+
+<section id="blog-header" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+         <div class="row">
+
+              <div class="col-md-offset-1 col-md-5 col-sm-12">
+                   <h2>{{blog.heading}}</h2>
+                   <h3>-{{blog.full_name}}</h3>
+              </div>
+              
+         </div>
+    </div>
+</section>
+
+<div class="blog-social-share">
+    <h4>Follow him on</h4>
+    <a href="{{blog.linkedin_url}}" class="btn btn-primary"><i class="fa fa-linkedin"></i>Linked In</a>
+    <a href="{{blog.twitter_url}}}" class="btn btn-success"><i class="fa fa-twitter"></i>twitter</a>
+</div>
+
+<section id="blog-detail" data-stellar-background-ratio="0.5">
+    <div class="container">
+         <div class="row">
+
+              <div class="col-md-offset-1 col-md-10 col-sm-12">
+                   
+                   <div class="blog-detail-thumb">
+                        <div class="blog-image">
+                             <img src="{{blog.photo.url}}" class="img-responsive" alt="Blog Image">
+                        </div>
+                        {{blog.description |safe}}
+                        
+                        <div class="blog-social-share">
+                             <h4>Share this article</h4>
+                             <a href="https://www.facebook.com/templatemo" class="btn btn-primary"><i class="fa fa-facebook"></i>facebook</a>
+                             <a href="#" class="btn btn-success"><i class="fa fa-twitter"></i>twitter</a>
+                             <a href="#" class="btn btn-danger"><i class="fa fa-google-plus"></i>google plus</a>
+                        </div>
+                   </div>
+              </div>
+              
+         </div>
+    </div>
+</section>
+
+{% endblock %}
